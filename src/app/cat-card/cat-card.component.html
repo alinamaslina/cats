@@ -1,22 +1,21 @@
 <p>cat-card works!</p>
 <mat-card class="example-card" appearance="outlined">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{ cat.name }}</mat-card-title>
-      <mat-card-subtitle>{{ cat.bred }}</mat-card-subtitle>
-    </mat-card-header>
-    <div class="img-container">
-        <img mat-card-image [src]="cat.imgage.src" [alt]="cat.image.alt">
-    </div>
-    <mat-card-content>
-      <p>
-        {{ cat.contant }}
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-        <ng-container *ngFor="Let btnName of cat.actions">
-            <button mat-button>{{ btnName }}</button>
-        </ng-container>
-    </mat-card-actions>
-  </mat-card>
-  
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ cat.name }}</mat-card-title>
+    <mat-card-subtitle>{{ cat.breed }}</mat-card-subtitle>
+  </mat-card-header>
+  <div class="img-container">
+    <img mat-card-image [src]="cat.image.src" [alt]="cat.image.alt" />
+  </div>
+  <mat-card-content>
+    <p>
+      {{ cat.content }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <ng-container *ngFor="let btnName of cat.actions">
+      <button mat-button>{{ btnName }}</button>
+    </ng-container>
+  </mat-card-actions>
+</mat-card>
