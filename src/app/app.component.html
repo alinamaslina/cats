@@ -1,7 +1,17 @@
 <div class="container">
   <div class="row">
-    <div *ngFor="let cat of cats" class="col-3 mt-3">
-      <app-cat-card [cat]="cat"></app-cat-card>
-    </div>
+    <nav>
+      <a mat-button href="/"> Home </a>
+      <a mat-button href="/cat-list"> List </a>
+      <a mat-button href="/contacts"> Contacts </a>
+    </nav>
+  </div>
+  <div class="row">
+    <nav>
+      <a mat-button [routerLink]="['/']"> Home </a>
+      <a mat-button [routerLink]="['/cat-list']"> List </a>
+      <a mat-button [routerLink]="['/contacts']"> Contacts </a>
+    </nav>
   </div>
 </div>
+<router-outlet></router-outlet>
